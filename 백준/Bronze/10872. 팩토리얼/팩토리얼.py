@@ -1,12 +1,8 @@
-N = int(input())
-
 def factorial(n):
-    if n == 1:
-        return 1
-    else:
-        return n * factorial(n-1)
+    result = 1
+    if n > 0 :
+        result = n * factorial(n-1)
+    return result
 
-if N == 0:
-    print(1)
-else:
-    print(factorial(N))
+n = int(input())
+print(factorial(n))
