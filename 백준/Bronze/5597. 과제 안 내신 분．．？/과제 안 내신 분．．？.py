@@ -1,9 +1,5 @@
-students = [i for i in range(1,31)]
+a = [int(input()) for _ in range(28)]
 
-for _ in range(28):
-    applied = int(input())
-    students.remove(applied)
-
-print(min(students))
-print(max(students))
-
+for x in range(1,31):
+    if x not in a:
+        print(x)
