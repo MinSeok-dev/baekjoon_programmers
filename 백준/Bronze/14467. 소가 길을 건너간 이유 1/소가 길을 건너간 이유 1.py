@@ -1,16 +1,14 @@
+import sys
+
 n = int(input())
-cow = []
-lr = []
 cnt = 0
+cow = [-1] * 11
 for _ in range(n):
-    a,b = map(int, input().split())
-    if a not in cow:
-        cow.append(a)
-        lr.append(b)
-    else:
-        c = cow.index(a)
-        if lr[c] != b:
-            cnt += 1
-            lr[c] = b
+	a,b = map(int,sys.stdin.readline().split())
+	if cow[a] == -1:
+		cow[a] = b
+	elif cow[a] != b:
+		cow[a] = b
+		cnt+=1
 print(cnt)
     
