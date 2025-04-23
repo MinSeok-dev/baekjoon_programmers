@@ -1,7 +1,20 @@
-import math
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
 
-n, a, b, c = map(int,input().split())
+# 입력 받기
+N, A, B, C = map(int, input().split())
 
-answer = math.factorial(n)//(math.factorial(a)*math.factorial(b)*math.factorial(c))
+# 팩토리얼 계산
+N_fact = factorial(N)
+A_fact = factorial(A)
+B_fact = factorial(B)
+C_fact = factorial(C)
 
-print(answer)
+# 중복 순열 계산
+result = N_fact // (A_fact * B_fact * C_fact)
+
+# 결과 출력
+print(result)
